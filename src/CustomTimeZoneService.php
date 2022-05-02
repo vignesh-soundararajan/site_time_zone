@@ -32,9 +32,14 @@ class CustomTimeZoneService {
   public function getData() {
     $admin_config = $this->configFactory->get('stz.settings');
     $tz = $admin_config->get('zone');
-    $date = new DrupalDateTime('now', 'UTC');
-    $date->setTimezone(new \DateTimeZone($tz));
-    return $date->format('jS M Y - g:i A');
+	if(!empty($tz)) {
+		$date = new DrupalDateTime('now', 'UTC');
+		$date->setTimezone(new \DateTimeZone($tz));
+		return $date->format('jS M Y - g:i A');
+	}
+	else {
+		return FALSE;
+	}
   }
 
 }
