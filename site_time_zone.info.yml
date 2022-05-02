@@ -1,0 +1,6 @@
+name: 'Site Timezone Clock'
+type: module
+description: 'Site Current Time Zone.'
+package: Custom
+core_version_requirement: ^8 || ^9
+configure: site_time_zone.admin

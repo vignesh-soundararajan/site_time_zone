@@ -1,0 +1,5 @@
+services:
+  site_time_zone.custom_timezone
+  _services:
+    class: Drupal\site_time_zone\CustomTimeZoneService
+    arguments: ['@config.factory']

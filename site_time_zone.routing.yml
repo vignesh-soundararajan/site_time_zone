@@ -1,0 +1,7 @@
+site_time_zone.admin:
+  path: '/admin/config/site_time_zone'
+  defaults:
+    _form: '\Drupal\site_time_zone\Form\SiteTimeZoneForm'
+    _title: 'Site Time Zone Form'
+  requirements:
+    _permission: 'site_time_zone_permissions'

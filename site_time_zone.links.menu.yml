@@ -1,0 +1,5 @@
+site_time_zone.admin:
+  title: 'Configure Timezone Clock'
+  description: 'Set and configure timezone clock.'
+  route_name: site_time_zone.admin
+  parent: system.admin_config_content

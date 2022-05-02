@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Multiple Timezone Clock module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function site_time_zone_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.site_time_zone':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Site Timezone module provides a block and an admin config. In admin config having different timezone. This module does not depend on any external javascript library or PHP library.') . '</p>';
+      $output .= '<h3>' . t('Configuration') . '</h3>';
+      $output .= '<ol>
+  <li>Install the module "Custom Site Timezone".</li>
+  <li>Admin config Url:- admin/config/site_time_zone</li>
+  <li>Fill value under Custom Site Timezone settings.</li>
+  <li>Go to the “Block Layout”. Eg:- Admin Menu >> structure >> block layout</li>
+  <li>Go to your block region where you want to put it.</li>
+  <li>Click the "Place block" button and in the modal dialog click the "Place block" button next to "Custom Site Timezone".</li>
+  <li>Click on the Save block button.</li>
+</ol>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function site_time_zone_theme($existing, $type, $theme, $path) {
+  return [
+    'custom_site_timezone' => [
+      'variables' => ['data' => []],
+    ],
+  ];
+}
