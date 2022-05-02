@@ -1,4 +1,4 @@
-name: 'Site Timezone Clock'
+name: 'Site Timezone'
 type: module
 description: 'Site Current Time Zone.'
 package: Custom
