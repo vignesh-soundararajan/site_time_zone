@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Primary module hooks for Custom Timezone Clock module.
+ * Primary module hooks for custom 1 Timezone Clock module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
